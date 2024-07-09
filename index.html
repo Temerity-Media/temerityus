@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Temerity Media</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        p {
+            font-size: 18px;
+        }
+        #countdown {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+    </style>
+    <script>
+        var timeLeft = 3;
+        function countdown() {
+            timeLeft--;
+            document.getElementById("countdown").innerHTML = timeLeft;
+            if (timeLeft > 0) {
+                setTimeout(countdown, 1000);
+            } else {
+                window.location.href = 'https://gotemerity.com';
+            }
+        }
+        setTimeout(countdown, 1000);
+    </script>
+</head>
+<body>
+    <h1>Welcome to Temerity Media</h1>
+    <p>Thank you for your interest in our services.</p>
+    <p>You will be redirected to our main site in <span id="countdown">3</span> seconds.</p>
+    <p>If you're not redirected, <a href="https://your-main-site.com">click here</a>.</p>
+</body>
+</html>
